@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="form">
+      <!-- Sidebar start -->
+      <div class="sidebar">
+        <div class="sidebar-step active">
+          <div class="sidebar-step-content">
+            <div class="sidebar-step-name">Step 1</div>
+            <div class="sidebar-step-info">Your info</div>
+          </div>
+        </div>
+
+        <div class="sidebar-step">
+          <div class="sidebar-step-content">
+            <div class="sidebar-step-name">Step 2</div>
+            <div class="sidebar-step-info">Select plan</div>
+          </div>
+        </div>
+
+        <div class="sidebar-step">
+          <div class="sidebar-step-content">
+            <div class="sidebar-step-name">Step 3</div>
+            <div class="sidebar-step-info">Add-ons</div>
+          </div>
+        </div>
+
+        <div class="sidebar-step">
+          <div class="sidebar-step-content">
+            <div class="sidebar-step-name">Step 4</div>
+            <div class="sidebar-step-info">Summary</div>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
+      <div class="form-container">
+        <div class="form-step visible">
+          <!-- Step 1 start -->
+          <div class="form-step__header">
+            <h1 class="form-step__title">Personal info</h1>
+            <div class="form-step__subtitle">
+              Please provide your name, email address, and phone number.
+            </div>
+          </div>
+          <form class="form-step__content">
+            <div class="form-step__input">
+              <label for="name"> Name </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="e.g. Stephen King"
+                required
+              />
+            </div>
+            <div class="form-step__input">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="e.g. stephenking@lorem.com"
+                required
+              />
+            </div>
+            <div class="form-step__input">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="e.g. +1 234 567 890"
+                required
+              />
+            </div>
+          </form>
+          <div class="form-step__footer">
+            <button class="form-step__button form-step__button--next">
+              Next Step
+            </button>
+          </div>
+
+          <!-- Step 1 end -->
+        </div>
+        <div class="form-step">
+          <!-- Step 2 start -->
+          <div class="form-step__header">
+            <h1 class="form-step__title">Select your plan</h1>
+            <div class="form-step__subtitle">
+              You have the option of monthly or yearly billing.
+            </div>
+          </div>
+          <form class="form-step__content">
+            <input
+              class="form-step__switch-input"
+              type="checkbox"
+              name="yearly"
+              id="yearly"
+              value="yearly"
+            />
+            <div class="form-step__choose">
+              <input
+                class="form-step__choose-input"
+                type="radio"
+                name="plan"
+                id="arcade"
+                value="arcade"
+                checked
+              />
+              <label class="form-step__choose-item" for="arcade">
+                <img src="./assets/images/icon-arcade.svg" alt="Arcade" />
+                <div class="form-step__choose-name">Arcade</div>
+                <div class="form-step__choose-price month">$9/mo</div>
+                <div class="form-step__choose-price year">$90/yr</div>
+              </label>
+              <input
+                class="form-step__choose-input"
+                type="radio"
+                name="plan"
+                id="advanced"
+                value="advanced"
+              />
+              <label class="form-step__choose-item" for="advanced">
+                <img src="./assets/images/icon-advanced.svg" alt="Advanced" />
+                <div class="form-step__choose-name">Advanced</div>
+                <div class="form-step__choose-price month">$12/mo</div>
+                <div class="form-step__choose-price year">$120/yr</div>
+              </label>
+              <input
+                class="form-step__choose-input"
+                type="radio"
+                name="plan"
+                id="pro"
+                value="pro"
+              />
+              <label class="form-step__choose-item" for="pro">
+                <img src="./assets/images/icon-pro.svg" alt="Pro" />
+                <div class="form-step__choose-name">Pro</div>
+                <div class="form-step__choose-price month">$15/mo</div>
+                <div class="form-step__choose-price year">$150/yr</div>
+              </label>
+            </div>
+            <div class="form-step__switch">
+              <div class="form-step__switch-label" id="switch-monthly">
+                Monthly
+              </div>
+              <label for="yearly" class="form-step__switch-toggle"></label>
+              <div class="form-step__switch-label" id="switch-yearly">
+                Yearly
+              </div>
+            </div>
+          </form>
+          <div class="form-step__footer form-step__footer--two">
+            <div class="form-step__link form-step__button--back">Go Back</div>
+            <button class="form-step__button form-step__button--next">
+              Next Step
+            </button>
+          </div>
+
+          <!-- Step 2 end -->
+        </div>
+        <div class="form-step">
+          <!-- Step 3 start -->
+          <div class="form-step__header">
+            <h1 class="form-step__title">Pick add-ons</h1>
+            <div class="form-step__subtitle">
+              Add-ons help enhance your gaming experience.
+            </div>
+          </div>
+          <form class="form-step__content" data-time="monthly">
+            <input
+              type="checkbox"
+              class="form-step__checkbox-element"
+              name="online-service"
+              id="online-service"
+              hidden
+            />
+            <label for="online-service" class="form-step__checkbox">
+              <div class="form-step__checkbox-input">
+                <div class="form-step__checkbox-icon"></div>
+              </div>
+              <div class="form-step__checkbox-info">
+                <div class="form-step__checkbox-name">Online service</div>
+                <div class="form-step__checkbox-description">
+                  Access to multiplayer games
+                </div>
+              </div>
+              <div class="form-step__checkbox-price month">$1/mo</div>
+              <div class="form-step__checkbox-price year">$10/yr</div>
+            </label>
+            <input
+              type="checkbox"
+              class="form-step__checkbox-element"
+              name="larger-storage"
+              id="larger-storage"
+              hidden
+            />
+            <label for="larger-storage" class="form-step__checkbox">
+              <div class="form-step__checkbox-input">
+                <div class="form-step__checkbox-icon"></div>
+              </div>
+              <div class="form-step__checkbox-info">
+                <div class="form-step__checkbox-name">Larger storage</div>
+                <div class="form-step__checkbox-description">
+                  Extra 1TB of cloud save
+                </div>
+              </div>
+              <div class="form-step__checkbox-price month">$2/mo</div>
+              <div class="form-step__checkbox-price year">$20/yr</div>
+            </label>
+            <input
+              type="checkbox"
+              class="form-step__checkbox-element"
+              name="customizable-profile"
+              id="customizable-profile"
+              hidden
+            />
+            <label for="customizable-profile" class="form-step__checkbox">
+              <div class="form-step__checkbox-input">
+                <div class="form-step__checkbox-icon"></div>
+              </div>
+              <div class="form-step__checkbox-info">
+                <div class="form-step__checkbox-name">Customizable Profile</div>
+                <div class="form-step__checkbox-description">Custom theme on your profile</div>
+              </div>
+              <div class="form-step__checkbox-price month">$2/mo</div>
+              <div class="form-step__checkbox-price year">$20/yr</div>
+            </label>
+          </form>
+          <div class="form-step__footer form-step__footer--two">
+            <div class="form-step__link form-step__button--back">Go Back</div>
+            <button class="form-step__button form-step__button--next">
+              Next Step
+            </button>
+          </div>
+
+          <!-- Step 3 end -->
+        </div>
+        <div class="form-step">
+          <!-- Step 4 start -->
+          <div class="form-step__header">
+            <h1 class="form-step__title">Finishing up</h1>
+            <div class="form-step__subtitle">Double-check everything looks OK before confirming.</div>
+          </div>
+
+          <div class="form-result__box">
+            <div class="form-result__info">
+              <div class="form-result__plan">
+                <div id="plan-name" class="form-result__plan-name">Arcade (yearly)</div>
+                <div id="plan-change" class="form-result__link">Change</div>
+              </div>
+              <div id="plan-price" class="form-result__plan-price year">$90/yr</div>
+            </div>
+            <hr>
+            <ul id="add-ons">
+              <li>
+                <span>Online service</span>
+                <span>+$1/mo</span>
+              </li>
+              <li>
+                <span>Larger storage</span>
+                <span>+$2/mo</span>
+              </li>
+              <li>
+                <span>Customizable profile</span>
+                <span>+$2/mo</span>
+              </li>
+            </ul>
+          </div>
+          <div id="total-price" class="form-result__total">
+            <span>Total (per month/year)</span>
+            <span class="form-result__total-price">$0</span>
+          </div>
+          <div class="form-step__footer form-step__footer--two">
+            <div class="form-step__link form-step__button--back">Go Back</div>
+            <button class="form-step__button form-step__button--next">
+              Confirm
+            </button>
+          </div>
+          <!-- Step 4 end -->
+        </div>
+        <div class="form-step centered">
+          <!-- Step 5 start -->
+          <img src="./assets/images/icon-thank-you.svg" alt="Thank you">
+            <h1 class="form-step__title">Thank you!</h1>
+            <p class="form-step__subtitle">Thanks for confirming your subscription! We hope you have
+            fun using our platform. If you ever need support, please feel free to
+            email us at support@loremgaming.com.</p>
+          </div>
+          <!-- Step 5 end -->
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://ali.js.org/">Ali Bouhrouche</a>.
+    </div>
+  </body>
+</html>
